@@ -1,9 +1,9 @@
 #color0 8eb34c
-color0 1793D1
+color0 0771A6
 
 # Use Xft?
 use_xft yes
-xftfont snap
+xftfont DejaVu Sans:size=10
 xftalpha 1
 
 # Update interval in seconds
@@ -44,13 +44,9 @@ default_color white
 own_window_colour white
 
 #position
-gap_x 0
-gap_y 0
-alignment top_middle
-#minimum_size 1280
-#maximum_width 1280
-#minimum_size 1280 0
-#maximum_width 250
+gap_x 20
+gap_y 10
+alignment bottom_right
 
 # Subtract file system buffers from used memory?
 no_buffers yes
@@ -65,4 +61,6 @@ override_utf8_locale yes
 use_spacer none
 
 TEXT
-${voffset 0}${alignc} ${color0}:: Mail ${color}${execi 120 /home/pyther/scripts/checkmail.py} ${color0}:: PKGS ${color}${texeci 10800 sh /home/pyther/scripts/pmupdate.sh} ${color0}:: Weather ${color}${texeci 900 /usr/bin/conkyForecast --location=USOH0195 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC} ${color0}::
+${alignc}${font :bold:size=9}${time %B}
+${voffset 4}${font DejaVu Sans Mono:size=8}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color FCAF3E}'"$DJS"'${color}'" "/}${font}
+

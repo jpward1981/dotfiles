@@ -1,5 +1,4 @@
-#color0 8eb34c
-color0 1793D1
+color0 8eb34c
 
 # Use Xft?
 use_xft yes
@@ -18,6 +17,10 @@ own_window_type desktop
 
 # Use double buffering (reduces flicker, may not work for everyone)
 double_buffer yes
+
+# Minimum size of text area
+minimum_size 1280
+maximum_width 1280
 
 # Draw shades?
 draw_shades no
@@ -46,9 +49,9 @@ own_window_colour white
 #position
 gap_x 0
 gap_y 0
-alignment top_middle
-#minimum_size 1280
-#maximum_width 1280
+alignment top_left
+minimum_size 1280
+maximum_width 1280
 #minimum_size 1280 0
 #maximum_width 250
 
@@ -58,6 +61,14 @@ no_buffers yes
 # set to yes if you want all text to be in uppercase
 uppercase no
 
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
 # Force UTF8? note that UTF8 support required XFT
 override_utf8_locale yes
 
@@ -65,4 +76,4 @@ override_utf8_locale yes
 use_spacer none
 
 TEXT
-${voffset 0}${alignc} ${color0}:: Mail ${color}${execi 120 /home/pyther/scripts/checkmail.py} ${color0}:: PKGS ${color}${texeci 10800 sh /home/pyther/scripts/pmupdate.sh} ${color0}:: Weather ${color}${texeci 900 /usr/bin/conkyForecast --location=USOH0195 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC} ${color0}::
+${voffset 0}${time %A %B %d, %Y  -  %R:%S}
