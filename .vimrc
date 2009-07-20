@@ -1,5 +1,5 @@
-set autoindent
-set smartindent
+" set autoindent
+" set smartindent
 set softtabstop=4
 set shiftwidth=4
 set expandtab
