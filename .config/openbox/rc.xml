@@ -695,7 +695,7 @@
 
   # end of the example
 -->
-    <application name="stalonetray">
+    <application name="trayer">
       <decor>no</decor>
       <desktop>all</desktop>
       <skip_pager>yes</skip_pager>
