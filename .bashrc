@@ -21,8 +21,11 @@ esac
 shopt -s cdspell    # Correct cd typos
 shopt -s checkwinsize     # Update $LINES and $COLUMNS after resizes
 
+. /etc/bash_completion
 
 alias ls='ls --group-directories-first --color=auto'
+alias mythfrontend43='MYTHCONFDIR=/home/pyther/.mythtv43/; mythfrontend'
+eval `dircolors -b`
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -35,4 +38,12 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 export OOO_FORCE_DESKTOP=gnome
 #export TERM=xterm-256color
 
+export GREP_COLOR="1;33"
+alias grep='grep --color=auto'
+
 export EDITOR=vim
+
+alias zipspace="sudo mount -t davfs https://gozips.uakron.edu/msg31 /home/pyther/zipspace -o uid=pyther,gid=users"
+alias uzipspace="sudo umount /home/pyther/zipspace"
+alias scpresume="rsync --partial --progress --rsh='ssh'"
+alias sync_music="rsync -avz --size-only --delete-during --progress --rsh='ssh -p 4022' /home/pyther/Music/ pyther.net:/home/pyther/Music/"
