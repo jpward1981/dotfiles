@@ -30,7 +30,7 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Mouse</monitor>
+    <monitor>Any</monitor>
   </placement>
   <theme>
     <name>TropicBomb</name>
@@ -45,7 +45,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
@@ -102,13 +102,12 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>3</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>1</name>
-      <name>2</name>
-      <name>3</name>
-      <name>4</name>
+      <name>Main</name>
+      <name>Sec</name>
+      <name>(Unnamed desktop)</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -130,13 +129,13 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>10</top>
+    <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>TopRight</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>512</floatingX>
     <floatingY>0</floatingY>
@@ -267,64 +266,27 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
-        <command>thunar /data</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>gnome-terminal --hide-menubar</command>
+        <command>terminal</command>
       </action>
     </keybind>
-    <keybind key="A-p">
+    <keybind key="Print">
       <action name="Execute">
-        <command>mpc toggle</command>
+        <execute>/usr/bin/screenshot scr</execute>
       </action>
     </keybind>
-    <keybind key="A-s">
+    <keybind key="C-Print">
       <action name="Execute">
-        <command>sudo pm-suspend</command>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="MoveToEdgeNorth"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="MoveToEdgeSouth"/>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="MoveToEdgeWest"/>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="MoveToEdgeEast"/>
-    </keybind>
-    <keybind key="C-Up">
-      <action name="GrowToEdgeNorth"/>
-    </keybind>
-    <keybind key="C-Down">
-      <action name="GrowToEdgeSouth"/>
-    </keybind>
-    <keybind key="C-Left">
-      <action name="GrowToEdgeWest"/>
-    </keybind>
-    <keybind key="C-Right">
-      <action name="GrowToEdgeEast"/>
-    </keybind>
-    <keybind key="A-F12">
-      <action name="ToggleFullscreen"/>
-    </keybind>
-    <keybind key="W-1">
-      <action name="MoveResizeTo">
-        <monitor>1</monitor>
-      </action>
-    </keybind>
-    <keybind key="W-2">
-      <action name="MoveResizeTo">
-        <monitor>2</monitor>
+        <execute>/usr/bin/screenshot win</execute>
       </action>
     </keybind>
   </keyboard>
   <mouse>
-    <dragThreshold>1</dragThreshold>
+    <dragThreshold>8</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
@@ -733,16 +695,5 @@
 
   # end of the example
 -->
-    <application class="stalonetray">
-      <decor>no</decor>
-      <desktop>all</desktop>
-      <skip_pager>yes</skip_pager>
-      <skip_taskbar>yes</skip_taskbar>
-      <position>
-        <x>0</x>
-        <y>0</y>
-        <monitor>1</monitor>
-      </position>
-    </application>
   </applications>
 </openbox_config>

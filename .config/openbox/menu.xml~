@@ -1,31 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="None-1204" label="New Menu">
+		<item label="New Item">
+			<action name="Execute">
+				<execute>
+					command
+				</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="dev-menu" label="Dev">
+		<item label="Eclipse">
+			<action name="Execute">
+				<execute>
+					eclipse
+				</execute>
+			</action>
+		</item>
+		<item label="Netbeans">
+			<action name="Execute">
+				<execute>
+					netbeans
+				</execute>
+			</action>
+		</item>
+		<item label="Bluefish">
+			<action name="Execute">
+				<execute>
+					bluefish
+				</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="cisco-menu" label="Cisco">
+		<item label="PacketTracer">
+			<action name="Execute">
+				<execute>
+					PacketTracer
+				</execute>
+			</action>
+		</item>
+	</menu>
 	<menu id="apps-menu" label="Applications">
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>
-					gnome-terminal
-				</execute>
+				<command>
+					terminal
+				</command>
 			</action>
 		</item>
 		<item label="Thunar">
 			<action name="Execute">
 				<execute>
-					thunar /data
+					thunar
 				</execute>
-			</action>
-		</item>
-		<item label="gcalctool">
-			<action name="Execute">
-				<command>
-					gcalctool
-				</command>
 			</action>
 		</item>
 		<item label="Wallpaper">
 			<action name="Execute">
 				<command>
-					nitrogen /data/Wallpaper
+					nitrogen /home/pyther/Wallpaper
 				</command>
 			</action>
 		</item>
@@ -37,39 +71,25 @@
 			</action>
 		</item>
 	</menu>
-	<menu id="network-menu" label="Net">
-		<item label="Firefox">
+	<menu id="network-menu" label="Network">
+		<item label="Firefox3">
 			<action name="Execute">
 				<execute>
-					firefox
+					firefox3
 				</execute>
 			</action>
 		</item>
-		<item label="Thundebird">
+		<item label="Thunderbird">
 			<action name="Execute">
 				<execute>
 					thunderbird
 				</execute>
 			</action>
 		</item>
-		<item label="Midori">
-			<action name="Execute">
-				<execute>
-					midori
-				</execute>
-			</action>
-		</item>
 		<item label="Deluge">
 			<action name="Execute">
 				<execute>
-					deluge-gtk
-				</execute>
-			</action>
-		</item>
-		<item label="XChat">
-			<action name="Execute">
-				<execute>
-					xchat
+					deluge
 				</execute>
 			</action>
 		</item>
@@ -80,26 +100,33 @@
 				</execute>
 			</action>
 		</item>
+		<item label="XChat">
+			<action name="Execute">
+				<execute>
+					xchat
+				</execute>
+			</action>
+		</item>
 	</menu>
 	<menu id="office-menu" label="Office">
 		<item label="Writer">
 			<action name="Execute">
 				<execute>
-					/usr/bin/soffice -writer
+					/opt/openoffice/program/swriter
 				</execute>
 			</action>
 		</item>
 		<item label="Calc">
 			<action name="Execute">
 				<execute>
-					/usr/bin/soffice -calc
+					/opt/openoffice/program/scalc
 				</execute>
 			</action>
 		</item>
 		<item label="Draw">
 			<action name="Execute">
 				<execute>
-					/usr/bin/soffice -draw
+					/opt/openoffice/program/sdraw
 				</execute>
 			</action>
 		</item>
@@ -112,6 +139,13 @@
 		</item>
 	</menu>
 	<menu id="multimedia-menu" label="Multimedia">
+		<item label="Exaile">
+			<action name="Execute">
+				<execute>
+					exaile
+				</execute>
+			</action>
+		</item>
 		<item label="Audacious">
 			<action name="Execute">
 				<execute>
@@ -119,38 +153,17 @@
 				</execute>
 			</action>
 		</item>
-		<item label="Avidemux">
-			<action name="Execute">
-				<execute>
-					avidemux2_gtk
-				</execute>
-			</action>
-		</item>
-		<item label="dvd-styler">
-			<action name="Execute">
-				<execute>
-					dvd-styler
-				</execute>
-			</action>
-		</item>
-		<item label="Gimp">
-			<action name="Execute">
-				<execute>
-					gimp
-				</execute>
-			</action>
-		</item>
-		<item label="Gnome Mplayer">
-			<action name="Execute">
-				<execute>
-					gnome-mplayer
-				</execute>
-			</action>
-		</item>
 		<item label="k3b">
 			<action name="Execute">
 				<execute>
 					k3b
+				</execute>
+			</action>
+		</item>
+		<item label="GnomeBaker">
+			<action name="Execute">
+				<execute>
+					gnomebaker
 				</execute>
 			</action>
 		</item>
@@ -163,59 +176,31 @@
 		</item>
 	</menu>
 	<menu id="games-menu" label="Games">
-		<item label="AisleRiot Solitaire">
-			<action name="Execute">
-				<execute>
-                                    sol
-				</execute>
-			</action>
-		</item>
-		<item label="Blackjack">
-			<action name="Execute">
-				<execute>
-                                    blackjack
-				</execute>
-			</action>
-		</item>
 		<item label="Crack-Attack">
 			<action name="Execute">
 				<command>
-                                    crack-attack
-				</command>
-			</action>
-		</item>
-		<item label="FiveorMore">
-			<action name="Execute">
-				<execute>
-                                    glines
-				</execute>
-			</action>
-		</item>
-		<item label="Iagno">
-			<action name="Execute">
-				<execute>
-                                    iagno
-				</execute>
-			</action>
-		</item>
-		<item label="Nibbles">
-			<action name="Execute">
-				<execute>
-                                    gnibbles
-				</execute>
-			</action>
-		</item>
-		<item label="SameGnome">
-			<action name="Execute">
-				<command>
-                                    same-gnome
+					crack-attack
 				</command>
 			</action>
 		</item>
 		<item label="Tetris">
 			<action name="Execute">
 				<command>
-                                    gnometris
+					gnometris
+				</command>
+			</action>
+		</item>
+		<item label="FiveorMore">
+			<action name="Execute">
+				<execute>
+					glines
+				</execute>
+			</action>
+		</item>
+		<item label="SameGnome">
+			<action name="Execute">
+				<command>
+					same-gnome
 				</command>
 			</action>
 		</item>
@@ -224,13 +209,23 @@
 		<separator label="Openbox"/>
 		<menu id="apps-menu"/>
 		<menu id="network-menu"/>
+		<menu id="cisco-menu"/>
 		<menu id="office-menu"/>
 		<menu id="dev-menu"/>
 		<menu id="multimedia-menu"/>
 		<menu id="games-menu"/>
+		<menu execute="obm-xdg" id="xdg-menu" label="xdg"/>
 		<separator/>
+	  	<menu id="pipe-weather" label="Weather" execute="python ~/.config/openbox/scripts/gweather.py YOURCITY" />
 		<menu id="client-list-menu"/>
 		<separator/>
+		<item label="Suspend">
+			<action name="Execute">
+				<execute>
+					sudo pm-suspend
+				</execute>
+			</action>
+		</item>
 		<item label="Reconfigure">
 			<action name="Reconfigure"/>
 		</item>
