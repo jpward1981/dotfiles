@@ -1,6 +1,7 @@
 #color0 8eb34c
 color0 0771A6
 
+
 # Use Xft?
 use_xft yes
 xftfont DejaVu Sans:size=10
@@ -44,9 +45,10 @@ default_color white
 own_window_colour white
 
 #position
-gap_x 20
-gap_y 10
-alignment bottom_right
+gap_x 5
+gap_y -10
+#alignment bottom_right
+aligment bottom_left
 
 # Subtract file system buffers from used memory?
 no_buffers yes
@@ -62,5 +64,5 @@ use_spacer none
 
 TEXT
 ${alignc}${font :bold:size=9}${time %B}
-${voffset 4}${font DejaVu Sans Mono:size=8}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color FCAF3E}'"$DJS"'${color}'" "/}${font}
+${voffset 4}${font DejaVu Sans Mono:size=8}${execpi 3600 DJS=`date +%_d`; cal | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color FCAF3E}'"$DJS"'${color}'" "/}${font}
 
