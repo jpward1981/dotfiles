@@ -46,7 +46,7 @@ own_window_colour white
 
 #position
 gap_x 5
-gap_y -10
+gap_y 28
 #alignment bottom_right
 aligment bottom_left
 

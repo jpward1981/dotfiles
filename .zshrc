@@ -8,6 +8,10 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
 #LS Color Completion
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
@@ -40,7 +44,11 @@ RPROMPT2=''
 export RPS1='%F{green}%~%f'
 export RPS2=''
 
-
+case $TERM in
+    xterm*)
+        precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+        ;;
+esac
 
 # key bindings
 bindkey "\e[1~" beginning-of-line
@@ -70,7 +78,7 @@ bindkey '^i' expand-or-complete-prefix
 
 
 alias ls='ls --group-directories-first --color=auto'
-alias mythfrontend43='MYTHCONFDIR=/home/pyther/.mythtv43/; mythfrontend'
+alias irssi='echo -n "\033]2;irssi\007"; irssi'
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -92,3 +100,4 @@ alias uzipspace="sudo umount /home/pyther/zipspace"
 alias scpresume="rsync --partial --progress --rsh='ssh'"
 alias sync_music="rsync -avz --delete --progress /data/Music/ /mnt/mongo/pyther/Music"
 alias slurpy="slurpy -c"
+alias icytower="wine ~/.wine/drive_c/games/icytower1.4/icytower14.exe"

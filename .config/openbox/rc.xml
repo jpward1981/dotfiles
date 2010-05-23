@@ -130,8 +130,8 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>10</top>
-    <bottom>0</bottom>
+    <top>0</top>
+    <bottom>28</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -158,11 +158,6 @@
     <keybind key="C-A-Delete">
       <action name="execute">
         <execute>lxtask</execute>
-      </action>
-    </keybind>
-    <keybind key="A-F2">
-      <action name="execute">
-        <execute>gmrun</execute>
       </action>
     </keybind>
     <!-- Keybindings for desktop switching -->
@@ -275,7 +270,17 @@
         <command>gnome-terminal --hide-menubar</command>
       </action>
     </keybind>
-    <keybind key="A-p">
+    <keybind key="W-b">
+      <action name="Execute">
+        <command>midori</command>
+      </action>
+    </keybind>
+    <keybind key="W-c">
+      <action name="Execute">
+        <command>gcalctool</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
       <action name="Execute">
         <command>mpc toggle</command>
       </action>
@@ -285,28 +290,43 @@
         <command>sudo pm-suspend</command>
       </action>
     </keybind>
-    <keybind key="W-Up">
+    <keybind key="W-r">
+      <action name="execute">
+        <execute>gmrun</execute>
+      </action>
+    </keybind>
+    <keybind key="A-F5">
+      <action name="execute">
+        <execute>xkill</execute>
+      </action>
+    </keybind>
+    <keybind key="A-BackSpace">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
       <action name="MoveToEdgeNorth"/>
     </keybind>
-    <keybind key="W-Down">
+    <keybind key="W-A-Down">
       <action name="MoveToEdgeSouth"/>
     </keybind>
-    <keybind key="W-Left">
+    <keybind key="W-A-Left">
       <action name="MoveToEdgeWest"/>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="W-A-Right">
       <action name="MoveToEdgeEast"/>
     </keybind>
-    <keybind key="C-Up">
+    <keybind key="W-C-Up">
       <action name="GrowToEdgeNorth"/>
     </keybind>
-    <keybind key="C-Down">
+    <keybind key="W-C-Down">
       <action name="GrowToEdgeSouth"/>
     </keybind>
-    <keybind key="C-Left">
+    <keybind key="W-C-Left">
       <action name="GrowToEdgeWest"/>
     </keybind>
-    <keybind key="C-Right">
+    <keybind key="W-C-Right">
       <action name="GrowToEdgeEast"/>
     </keybind>
     <keybind key="A-F12">
@@ -320,6 +340,22 @@
     <keybind key="W-2">
       <action name="MoveResizeTo">
         <monitor>2</monitor>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>835</width>
+        <height>995</height>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>835</width>
+        <height>995</height>
       </action>
     </keybind>
   </keyboard>

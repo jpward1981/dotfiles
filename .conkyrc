@@ -1,14 +1,6 @@
-#color0 8eb34c
-#color0 1793D1
-#color0 000000
-#color0 acc7e5
-#color0 67a0e0
-color0 81b1e7
-
-
 # Use Xft?
 use_xft yes
-xftfont snap
+#xftfont snap
 xftalpha 1
 
 # Update interval in seconds
@@ -42,26 +34,20 @@ draw_borders no
 # Stippled borders?
 stippled_borders 0
 
-# border margins
-border_margin 0
-
 # border width
 #border_width 1
 
 # Default colors and also border colors
 default_color white
+#default_color 000000
 #default_shade_color black
 #default_outline_color white
 own_window_colour white
 
 #position
-gap_x 0
-gap_y 0
-alignment top_left
-#minimum_size 1280
-#maximum_width 1280
-minimum_size 1677 
-maximum_width 1680
+gap_x 30
+gap_y 40
+alignment bottom_right
 
 # Subtract file system buffers from used memory?
 no_buffers yes
@@ -75,5 +61,8 @@ override_utf8_locale yes
 # Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer none
 
+color0 419aff
 TEXT
-${time %A %B %d, %Y  -  %R:%S}${alignc} ${color0}:: Mail ${color}${texeci 120 /home/pyther/scripts/checkmail.py} ${color0}:: PKGS ${color}${texeci 10800 sh /home/pyther/scripts/pmupdate.sh} ${color0}:: Weather ${color}${texeci 900 /usr/bin/conkyForecast --location=USOH0008 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC} ${color0}::
+${font Bitstream Vera Sans:bold:size=14}
+${color0}Mail: ${color}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color}${texeci 900 /usr/bin/conkyForecast --location=USOH0008 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC}
+

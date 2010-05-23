@@ -7,8 +7,7 @@ if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
 fi
 
 #stalonetray &
-trayer --edge top --align right --width 100 --widthtype pixel --transparent true --alpha 255 --expand true --height 12 &
-sleep 1;
+tint2 &
 ossxmix -xb &
 
 conky -c .conkyrc &
