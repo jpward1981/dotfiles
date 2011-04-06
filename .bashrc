@@ -2,6 +2,11 @@ if echo $PATH | awk "/:?$(echo "${HOME}/bin" | sed 's;/;\\/;g'):?/" &> /dev/null
 	PATH="${PATH}:${HOME}/bin"
 fi
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
 
 # Prompt
 #PS1="[\u\[\033[0;34m\]@\h \[\033[1;32m\]\W\[\033[00m\]]\$ "
@@ -46,4 +51,9 @@ export EDITOR=vim
 alias zipspace="sudo mount -t davfs https://gozips.uakron.edu/msg31 /home/pyther/zipspace -o uid=pyther,gid=users"
 alias uzipspace="sudo umount /home/pyther/zipspace"
 alias scpresume="rsync --partial --progress --rsh='ssh'"
-alias sync_music="rsync -avz --size-only --delete-during --progress --rsh='ssh -p 4022' /home/pyther/Music/ pyther.net:/home/pyther/Music/"
+#alias sync_music="rsync -avz --size-only --delete-during --progress --rsh='ssh -p 4022' /home/pyther/Music/ pyther.net:/home/pyther/Music/"
+alias sync_music="rsync -avz --delete --progress /data/Music/ /mnt/mongo/pyther/Music"
+alias steam="wine /home/pyther/.wine/drive_c/Program\ Files/Steam/Steam.exe"
+alias mythfrontend="mpc pause; amixer sset Master 100%; mythfrontend; amixer sset Master 40%"
+
+export WINEARCH=win32

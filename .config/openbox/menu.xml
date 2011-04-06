@@ -4,14 +4,14 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>
-					gnome-terminal
+					gnome-terminal --hide-menubar
 				</execute>
 			</action>
 		</item>
-		<item label="Thunar">
+		<item label="pcmanfm">
 			<action name="Execute">
 				<execute>
-					thunar /data
+					pcmanfm /data
 				</execute>
 			</action>
 		</item>

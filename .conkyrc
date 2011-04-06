@@ -61,8 +61,10 @@ override_utf8_locale yes
 # Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer none
 
-color0 419aff
+color1 419aff
+color0 646060
+
 TEXT
 ${font Bitstream Vera Sans:bold:size=14}
-${color0}Mail: ${color}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color}${texeci 900 /usr/bin/conkyForecast --location=USOH0008 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC}
+${color0}Mail: ${color1}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color1}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color1}${texeci 900 /usr/bin/conkyForecast --location=USOH0008 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC}
 

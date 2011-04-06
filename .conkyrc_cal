@@ -1,5 +1,6 @@
 #color0 8eb34c
 color0 0771A6
+#color0 000000
 
 
 # Use Xft?
@@ -39,7 +40,7 @@ stippled_borders 0
 #border_width 1
 
 # Default colors and also border colors
-default_color white
+default_color black
 #default_shade_color black
 #default_outline_color white
 own_window_colour white

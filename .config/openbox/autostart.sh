@@ -8,9 +8,9 @@ fi
 
 #stalonetray &
 tint2 &
-ossxmix -xb &
+#ossxmix -xb &
 
 conky -c .conkyrc &
-conky -c .conkyrc_cal &
+#conky -c .conkyrc_cal &
 
 

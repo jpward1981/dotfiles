@@ -45,51 +45,51 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>DejaVu Sans</name>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="OnScreenDisplay">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -131,7 +131,7 @@
      cases. -->
   <margins>
     <top>0</top>
-    <bottom>28</bottom>
+    <bottom>26</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -270,11 +270,6 @@
         <command>gnome-terminal --hide-menubar</command>
       </action>
     </keybind>
-    <keybind key="W-b">
-      <action name="Execute">
-        <command>midori</command>
-      </action>
-    </keybind>
     <keybind key="W-c">
       <action name="Execute">
         <command>gcalctool</command>
@@ -282,12 +277,17 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>mpc toggle</command>
+        <command>ncmpcpp toggle</command>
       </action>
     </keybind>
-    <keybind key="A-s">
+    <keybind key="W-0x19">
       <action name="Execute">
-        <command>sudo pm-suspend</command>
+        <command>ncmpcpp prev</command>
+      </action>
+    </keybind>
+    <keybind key="W-0x1a">
+      <action name="Execute">
+        <command>ncmpcpp next</command>
       </action>
     </keybind>
     <keybind key="W-r">
@@ -295,9 +295,29 @@
         <execute>gmrun</execute>
       </action>
     </keybind>
+    <keybind key="W-b">
+      <action name="execute">
+        <execute>bash -c 'sleep 0.5; xset dpms force off'</execute>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="execute">
+        <execute>amixer sset Master 3%+</execute>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="execute">
+        <execute>amixer sset Master 3%-</execute>
+      </action>
+    </keybind>
     <keybind key="A-F5">
       <action name="execute">
         <execute>xkill</execute>
+      </action>
+    </keybind>
+    <keybind key="A-s">
+      <action name="Execute">
+        <command>sudo pm-suspend</command>
       </action>
     </keybind>
     <keybind key="A-BackSpace">
