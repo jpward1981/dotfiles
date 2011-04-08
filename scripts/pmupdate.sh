@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-pkgs=`pacman -Qu | wc -l`
+pkgs=$(pacman -Qu | wc -l)
 
 if [ -n "$pkgs" ]; then
     echo "$pkgs"
