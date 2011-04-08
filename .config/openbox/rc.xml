@@ -49,7 +49,7 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>DejaVu Sans</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -219,7 +219,7 @@
       </action>
     </keybind>
     <keybind key="A-d">
-      <action name="ToggleDecorations" />
+      <action name="ToggleDecorations"/>
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
@@ -314,13 +314,13 @@
     </keybind>
     <keybind key="A-Up">
       <action name="MoveRelative">
-        <x></x>
+        <x/>
         <y>-5</y>
       </action>
     </keybind>
     <keybind key="A-Down">
       <action name="MoveRelative">
-        <x></x>
+        <x/>
         <y>5</y>
       </action>
     </keybind>
