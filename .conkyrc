@@ -45,7 +45,7 @@ default_color white
 own_window_colour white
 
 #position
-gap_x 30
+gap_x 10
 gap_y 40
 alignment bottom_right
 
@@ -66,5 +66,5 @@ color0 646060
 
 TEXT
 ${font Bitstream Vera Sans:bold:size=14}
-${color0}Mail: ${color1}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color1}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color1}${texeci 900 /usr/bin/conkyForecast --location=USOH0008 --imperial --datatype=HT -ux}F - ${texeci 900 conkyForecast --location=USOH0195 --imperial --datatype=CC}
+${color0}Mail: ${color1}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color1}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color1}${execi 900 /home/pyther/scripts/conky_getWeather.bash}
 
