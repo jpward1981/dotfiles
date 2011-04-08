@@ -10,7 +10,8 @@ fi
 tint2 &
 #ossxmix -xb &
 
-conky -c .conkyrc &
+( sleep 2; conky -c .conkyrc; ) &
+#conky -c .conkyrc &
 #conky -c .conkyrc_cal &
 
 
