@@ -255,12 +255,12 @@
         <command>ncmpcpp toggle</command>
       </action>
     </keybind>
-    <keybind key="W-0x19">
+    <keybind key="W-comma">
       <action name="Execute">
         <command>ncmpcpp prev</command>
       </action>
     </keybind>
-    <keybind key="W-0x1a">
+    <keybind key="W-period">
       <action name="Execute">
         <command>ncmpcpp next</command>
       </action>
