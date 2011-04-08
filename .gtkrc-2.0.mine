@@ -1,0 +1,1 @@
+gtk-icon-sizes = "panel=16,16 : gtk-menu=16,16 : gtk-button=16,16 : gtk-small-toolbar=16,16 : gtk-large-toolbar=16,16 : gtk-dnd=16,16 : panel-menu=16,16"
