@@ -2,16 +2,16 @@ if echo $PATH | awk "/:?$(echo "${HOME}/bin" | sed 's;/;\\/;g'):?/" &> /dev/null
 	PATH="${PATH}:${HOME}/bin"
 fi
 
+# Prompt
+#PS1="[\u\[\033[0;34m\]@\h \[\033[1;32m\]\W\[\033[00m\]]\$ "
+PS1='\[\033[1;34m\]\h:\[\033[1;32m\]\W\[\033[1;34m\] $\[\e[0m\] '
+PS2='> \[\e[1;34m\]\$\[\e[0m\] '
+
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
         export TERM='xterm-256color'
 else
     export TERM='xterm-color'
 fi
-
-# Prompt
-#PS1="[\u\[\033[0;34m\]@\h \[\033[1;32m\]\W\[\033[00m\]]\$ "
-PS1='\[\033[1;34m\]\h:\[\033[1;32m\]\W\[\033[1;34m\] $\[\e[0m\] '
-PS2='> \[\e[1;34m\]\$\[\e[0m\] '
 
 # X Terminal titles
 case "$TERM" in
