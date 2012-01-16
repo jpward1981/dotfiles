@@ -1,0 +1,50 @@
+Xcursor.theme: Vanilla-DMZ
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.autohint: true
+Xft.lcdfilter: lcddefault
+
+urxvt*secondaryScroll:      true
+urxvt*buffered:             true
+urxvt*scrollBar:            false
+URxvt*saveLines:            5000
+URxvt*cursorBlink:          true
+URxvt.font:                 xft:DejaVuSansMono:pixelsize=12
+URxvt.boldFont:             xft:DejaVuSansMono:pixelsize=12:bold
+!urxvt*font:                 xft:Liberation Mono:pixelsize=11
+!urxvt*fontBold:             xft:Liberation Mono:bold:pixelsize=11
+!urxvt*letterSpace:          0.5
+urxvt*iconFile:             /usr/share/icons/oxygen/16x16/apps/utilities-terminal.png
+urxvt*visualBell:           false
+urxvt*urgentOnBell:         true
+urxvt*cursorUnderline:      true
+URxvt.highlightColor:#444444
+
+! --[ URxvt - Perl ] --
+urxvt.perl-ext-common:      default,matcher,tabbedex
+
+! --[ URxvt - tabdex ]-----------------
+URxvt.tabbed.autohide: true
+URxvt.tabbed.new-button: false
+
+! --[ URxvt - URL/Clipboard Handling ]----------------------
+urxvt*urlLauncher:          firefox
+URxvt.matcher.button:       1
+URxvt.keysym.C-Delete:      perl:matcher:last
+URxvt.keysym.M-Delete:      perl:matcher:list
+
+
+! --[ URxvt - colors ]--------------------------------------
+URxvt.depth: 32
+URxvt.background: rgba:2222/2222/2222/bbbb
+URxvt.foreground:#eeeeee
+
+! --[ Color Scheme ]----------------------------------------
+
+#include ".config/xcolors/tango"
+!#include ".config/xcolors/zenburn"
+
