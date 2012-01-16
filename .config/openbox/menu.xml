@@ -4,7 +4,7 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>
-					gnome-terminal --hide-menubar
+					urxvt
 				</execute>
 			</action>
 		</item>
