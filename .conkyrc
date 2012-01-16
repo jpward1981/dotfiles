@@ -66,5 +66,5 @@ color0 646060
 
 TEXT
 ${font Bitstream Vera Sans:bold:size=14}
-${color0}Mail: ${color1}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color1}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color1}${execi 900 /home/pyther/scripts/conky_getWeather.bash}
+${color0}Mail: ${color1}${texeci 120 /home/pyther/scripts/checkmail.py} - ${color0}PKGs: ${color1}${execi 300 /home/pyther/scripts/pmupdate.sh} - ${color0}Weather: ${color1}${execi 600 /home/pyther/scripts/wunderground 44124}
 
