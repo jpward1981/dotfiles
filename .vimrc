@@ -1,4 +1,4 @@
-" set t_Co=256
+"set t_Co=16
 
 set tabstop=4
 set shiftwidth=4
@@ -14,6 +14,7 @@ set number
 " Highlight White Spaces
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraTab ctermbg=red guibg=red
+autocmd ColorScheme * highlight Tabs ctermbg=red guibg=red
 
 colorscheme wombat256
 
@@ -28,7 +29,10 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 " match ExtraWhitespace /[^\t]\zs\t\+/
 
 " Show trailing tab:
-2match ExtraTab /\t\+$/
+"2match ExtraTab /\t\+$/
+
+" Show Tabs (we hate them!)
+2match Tabs /\t/
 
 " Python stuff
 autocmd FileType python let python_highlight_all = 1
