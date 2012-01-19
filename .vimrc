@@ -1,5 +1,9 @@
 "set t_Co=16
 
+" For Mouse Scrolling in w/ urxvt
+set mouse=a " Sets mouse for all modes
+"set ttymouse=xterm2
+
 set tabstop=4
 set shiftwidth=4
 set smarttab

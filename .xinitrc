@@ -1,5 +1,6 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option caps:escape
+setxkbmap -option compose:ralt
 
 xrdb -merge ~/.Xresources
 
